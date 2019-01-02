@@ -14,9 +14,10 @@ array<array<float,4>,2> afun(array<array<float, 2>, 2> a3){
 
 int main()
 {
-  array<array<float, 2>, 2> a1 = {{1.2,3.4},{5.6,7.8}};
-//  a1[0][0] = 1.11111;
-//  a1[0][1] = 2.11111;
+  array<array<float, 2>, 2> a0 = {1,2,3,4};
+  array<array<float, 2>, 2> a1 = {{{1,2},{3,4}}};
+  a1[0][0] = 1.11111;
+  a1[0][1] = 2.11111;
   cout << a1[0][0] << " " << a1[0][1] << "\n" << endl;
   // get an array from a function
   array<array<float, 4>, 2> a4 = afun(a1);

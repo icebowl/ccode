@@ -2,7 +2,6 @@
 #include <array>
 using namespace std;
 
-
 array<array<float,4>,2> afun(array<array<float, 2>, 2> a3){
   array<array<float, 4>, 2> a2;
   /* Some operations on arr[] */
@@ -14,11 +13,15 @@ array<array<float,4>,2> afun(array<array<float, 2>, 2> a3){
 
 int main()
 {
-  array<array<float, 2>, 2> a1;
-  a1[0][0] = 1.11111;
-  a1[0][1] = 2.11111;
-  cout << a1[0][0] << " " << a1[0][1] << "\n" << endl;
+  int i,j;
+  array<array<float, 2>, 2> a0 = {1,2,3,4};
+
+  array<array<float, 2>, 2> a1 = {{{5,6},{7,8}}};
+  for (i = 0;i < 2;i++)for(j=0;j<2;j++)cout<<a0[i][j]<<" ";
+  cout<<endl;
+    for (i = 0;i < 2;i++)for(j=0;j<2;j++)cout<<a1[i][j]<<" ";
+//  cout << a1[0][0] << " " << a1[0][1] << "\n" << endl;
   // get an array from a function
   array<array<float, 4>, 2> a4 = afun(a1);
-  cout << a4[0][0] << " " << a4[0][1] << "\n" << endl;
+//  cout << a4[0][0] << " " << a4[0][1] << "\n" << endl;
 }
