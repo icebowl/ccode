@@ -14,6 +14,8 @@ array<array<float,4>,2> afun(array<array<float, 2>, 2> a3){
 int main()
 {
   int i,j;
+  array<array<int, 3>, 3> a10 = {{{5, 8, 2}, {8, 3, 1}, {5, 3, 9}}};
+
   array<array<float, 2>, 2> a0 = {1,2,3,4};
 
   array<array<float, 2>, 2> a1 = {{{5,6},{7,8}}};

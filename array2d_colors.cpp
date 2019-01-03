@@ -28,12 +28,12 @@ void buildArray(float color[4][3]){
 }
 
 void arrayStart(){
-  array<array<float,4>,3> color = {
+  array<array<float,3>,4> color = {{
       {  0.0 , 0.1686 , 0.2117 },
       {   0.0274 , 0.2117 , 0.2588},
       {   0.3450 , 0.4313 , 0.4588},
       {   0.3960 , 0.4823, 0.5137}
-      };
+    }};
     //  array<array<int, 3>, 2> a2 { { { {1, 2, 3} }, { { 4, 5, 6} } } };
       //                                   ^ ^ ^ ^            ^ ^
       //                                   | | | |            | |
