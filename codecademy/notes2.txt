@@ -60,3 +60,32 @@ void enter_code(int passcode) {
 int main() { 
   enter_code(0310);
 }
+
+
+//////////////////////////////////
+
+#include "main.hpp"
+
+int main() {
+  
+  std::cout << to_fahrenheit(0) << "\n";
+  std::cout << to_celsius(32) << "\n";
+  
+}
+
+#include <iostream>
+double to_fahrenheit(int celsius) {
+
+  double fahrenheit = (celsius * 9 / 5) + 32;
+  return fahrenheit;
+
+}
+
+double to_celsius(int fahrenheit) {
+
+  double celsius = (fahrenheit - 32) * 5 / 9;
+  return celsius;
+
+}
+
+/////
