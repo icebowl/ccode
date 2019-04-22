@@ -1,4 +1,4 @@
-// g++ cossin0.cpp -o cossin0.o
+// g++ sinperiodamp.cpp -o sinperiodamp.o
 #include <iostream>
 #include <cmath>
 using namespace std;
