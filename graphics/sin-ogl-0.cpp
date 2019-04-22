@@ -25,7 +25,7 @@ void drawPoints()
     glColor3f(1.0, 1.0, 1.0);
     glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
     h = -1.0; k = -1.0;
-    glPointSize(1.0);
+    glPointSize(10.0);
     glBegin(GL_POINTS);// points
     for (i = 0; i < 800; i++){
       h = (float)(400 -i)/400;
