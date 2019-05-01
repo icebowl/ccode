@@ -1,4 +1,4 @@
-// cwc pointers.cpp
+// cwc pointers1.cpp
 
 #include <iostream>
 using namespace std;
@@ -17,24 +17,4 @@ int main(){
 }
 
 
-/*
- * 
- * 
- myvar = 25;
-foo = &myvar;
-bar = myvar;
 
- * 
- * 
- * int firstvalue, secondvalue;
-  int * mypointer;
-
-  mypointer = &firstvalue;
-  *mypointer = 10;
-  mypointer = &secondvalue;
-  *mypointer = 20;
-  cout << "firstvalue is " << firstvalue << '\n';
-  cout << "secondvalue is " << secondvalue << '\n';
-  return 0;
- * 
- */

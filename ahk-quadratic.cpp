@@ -1,37 +1,39 @@
+// name file ahk-quadratic.cpp
 // example about structures
+//g++ ahk-quadratic.cpp -o ahk.o
 #include <iostream>
 #include <cmath>
 using namespace std;
-// y=a(x-h)²+k
+// y=a(x-h)²+k    y=a(x-h)^2 + k
 struct quadratic {
   double xstart;
   double xend;
   double aval;
   double hval;
   double kval;
-} xs,xe,a,h,k;
+} q;
+//method.
+void printq (quadratic q);
 
-void printq (quadratic qa,qh,qk);
-
-int main ()
-{
+int main (){
   double x,y;
-  xs.xstart = -10;
-  xe.xend = 10;
-  a.aval = 4.3;
-  h.hval = -3;
-  k.kval = 5;
-  printq(a);
-  cout<<"* * * * * * *"<<endl;
-  for (x = xs.xstart; x < (xe.xend+1); x++){
-      y = a.aval * pow(2 , (x - h.hval)) + k.kval;
-      cout<<x<<" "<<y<<endl;
-  }
-
+  q.xstart = -10;
+  q.xend = 10;
+  q.aval = 4.3;
+  q.hval = -3;
+  q.kval = 5;
+  printq(q);
+  cout<<"x \ty"<<endl;
+  for (x = q.xstart; x < (q.xend+1); x++){
+      y = q.aval * pow(2 , (x - q.hval)) + q.kval;
+      cout<<x<<"\t"<<y<<endl;
+  }//end for x
   return 0;
 }
 
-void printq (quadratic qa,qh,qk)
+void printq (quadratic q)
 {
-  cout << q.aval<<q.hval<<q.kval<<endl;
+  cout<<"a\th\tk\n";
+  cout << q.aval<<"\t"<<q.hval<<"\t"<<q.kval<<"\n\n";
+
 }

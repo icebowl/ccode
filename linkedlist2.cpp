@@ -10,7 +10,8 @@ struct node{
 };
 int main(){
 		int t,h;
-		node* n = new node;
+		node *node;
+		//node* n = new node;
 		n = new node;
 		n->data = 1;
 		t = n;
