@@ -1,6 +1,7 @@
 // cwc pointers.cpp
 // reference https://www.youtube.com/watch?v=o5wJkJJpKtM
 // https://www.youtube.com/channel/UCcDGsN3JxMavDkM9INRLGFA
+// https://www.cprogramming.com/tutorial/lesson15.html
 #include <iostream>
 using namespace std;
 struct node{
@@ -10,7 +11,7 @@ struct node{
 int main(){
 		int t,h;
 		node* n = new node;
-		//n = new node;
+		n = new node;
 		n->data = 1;
 		t = n;
 		h = n;
