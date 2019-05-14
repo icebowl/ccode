@@ -2,7 +2,10 @@
 // coefficient base exponent
 #include <iostream>
  using namespace std;
+void b42(){
+  cout<<"42"<<endl;
 
+}
  long  double cbe(double c, double b, int e){
     int exponent = e;
     long double value = 1;
