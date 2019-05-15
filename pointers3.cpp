@@ -26,7 +26,7 @@ int main(){
 		cout<<endl;
 	}
 	//print array memory locations
-	cout<<"\nprint &intergers[] memory address "<<"\n\n";
+	cout<<"\nprint intergers[] memory address "<<"\n\n";
 	for (int n = 0; n < 10; n++){
 		cout << integers[n]<<"\n";
 		cout<<endl;
