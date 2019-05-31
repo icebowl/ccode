@@ -64,6 +64,7 @@ void drawPoints()
       for (x = -10; x <= 10; x=x + (1.0/800.0)){
           //cout<<"points "<<h<<" "<<k<<endl;
           CosSinTan(x,1);
+          for (int p = 0; p <100000;p++);
           //if (green > 1)green = 0;
       }//end j
     glEnd();//end points
@@ -74,7 +75,7 @@ void drawPoints()
 int main(int argc, char **argv)
 {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE);
+    glutInitDisplayMode(GLUT_SINGLE);
     glutInitWindowSize(800, 800);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("OpenGL -800x800");
