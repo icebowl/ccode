@@ -9,14 +9,15 @@ struct ABi {
 
 void printABi(struct ABi abi);
 ABi abiPower (struct ABi abi, int root, int limit);
-
+ABi abiDivide (struct ABi num, ABi den,ABi quotient);
 int main() {
-   struct ABi xyin;
+   struct ABi xyin, xyin1, quotient;
    xyin.a = -2.0;
    xyin.bi = 2.0;
    printABi(xyin);
    xyin = abiPower(xyin,4,100);
    printABi(xyin);
+   xyin1 = abiDivide(xyin,xyin,quotient);
 }
 
 /* print_a: print a struct passed by value (copied) */
@@ -48,10 +49,18 @@ ABi abiPower (struct ABi abi, int root, int limit){
   return abi;
 }
 
-ABi abiDivide (struct ABi numerator, ABi denominator,ABi quotient){
-  double a = abi.a, xn1,xn;
-  double bi = abi.bi, yin1,yin;
-  double x, yi,xt,yti;
+ABi abiDivide (struct ABi num, ABi den,ABi quotient){
+  double a = num.a;
+  double bi = num.bi;
+  double x = den.a;
+  double yi = den.bi;
+  double h,ki ,hd;
+  // numberator
+  h = (a*x) +(bi*bi);
+  ki = (-1*a*bi)+(x*bi);
+  //denominator
+  hd = (x*x)+(bi*bi);
+
 
   return quotient;
 }
