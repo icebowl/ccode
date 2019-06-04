@@ -15,8 +15,7 @@ int main() {
    xyin.a = -2.0;
    xyin.bi = 2.0;
    printABi(xyin);
-   xyin = abiPower(xyin,4,100);
-   printABi(xyin);
+   //abiPower(xyin,4,100);
 }
 
 /* print_a: print a struct passed by value (copied) */
@@ -26,7 +25,7 @@ void printABi(struct ABi abi) {
    cout <<"\n\n"<< "a+bi = "<<x<<" + "<<yi<<"i"<<endl;
 }
 
-ABi abiPower (struct ABi abi, int root, int limit){
+double abiPower (struct ABi abi, int root, int limit){
   double a = abi.a, xn1,xn;
   double bi = abi.bi, yin1,yin;
   double x, yi,xt,yti;
@@ -43,15 +42,8 @@ ABi abiPower (struct ABi abi, int root, int limit){
   }
   cout<<" * * x "<<x<<" yi "<<yi<<"\n";
   count ++;
-  abi.a = x;
-  abi.bi = yi;
-  return abi;
-}
-
-ABi abiDivide (struct ABi numerator, ABi denominator,ABi quotient){
-  double a = abi.a, xn1,xn;
-  double bi = abi.bi, yin1,yin;
-  double x, yi,xt,yti;
-
-  return quotient;
+  //struct ABi xyi;
+  //xyi.a = x;
+  //xyi.bi = yi;
+  return 0;
 }
