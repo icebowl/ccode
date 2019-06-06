@@ -15,19 +15,17 @@ ABi abiDivide (struct ABi num, ABi den);
 int main() {
    struct ABi xyin, xyin1, quo, num, den;
    xyin.a = -2.0;
-   xyin.bi = 1.0;
-   //printABi(xyin);
+   xyin.bi = 2.0;
+   printABi(xyin);
    xyin1 = abiPower(xyin,4);
    cout<<" print xyin1 power  "<<endl;
-   //printABi(xyin1);
-  // printABi(xyin);
+   printABi(xyin1);
+   printABi(xyin);
    num = abiPower(xyin,4);
-  // printABi(xyin);
    den = abiPower(xyin,4);
-   cout<<"\n --- \n print num "<<endl;
-    printABi(num);
-    cout<<"\n ---\n print den "<<endl;
-     printABi(den);
+   cout<<" print num den  "<<endl;
+   printABi(num);
+   printABi(den);
    quo = abiDivide(num,den);
    cout<<" quotient "<<endl;
    printABi(xyin);
@@ -48,7 +46,6 @@ ABi abiPower (struct ABi abi, int root){
   //double xn1,xn, yin1,yin,x, yi,xt,yti;
   double xt, yti,x,yi;
   int n;
-  bool done = false;
 //  cout<<"a "<<a<<" bi "<<bi<<"\n";
 //  cout<<" * * x "<<x<<" yi "<<yi<<"\n";
   // a+bi and x+yi loop for products
@@ -64,14 +61,17 @@ ABi abiPower (struct ABi abi, int root){
   return abi;
 }
 
-ABi abiDivide (struct ABi num, struct ABi den){
+ABi abiDivide (struct ABi n, struct ABi d){
   struct ABi quo;
-  double a = num.a;
-  double bi = num.bi;
-  double x = den.a;
-  double yi = den.bi;
+  double a = n.a;
+  double bi = n.bi;
+  double x = d.a;
+  double yi = d.bi;
   double hn,kni ,kd,q,qi;
   // numberator
+  cout<<" @ @ @ "<<endl;
+  printABi(n);
+  printABi(d);
   hn = (a*x + bi * yi);
   kni = (-1*a*yi + x * bi) ;
   //denominator
@@ -79,5 +79,7 @@ ABi abiDivide (struct ABi num, struct ABi den){
   //divide
   q = hn / kd;  qi = kni / kd;
   quo.a = q; quo.bi = qi;
+  cout<<" ~ ~ ~ "<<endl;
+  printABi(quo);
   return quo;
 }
