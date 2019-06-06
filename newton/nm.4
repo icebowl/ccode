@@ -10,7 +10,6 @@ struct ABi {
 void printABi(struct ABi abi);
 ABi abiPower (struct ABi abi, int root);
 ABi abiDivide (struct ABi num, ABi den);
-
 // main()
 int main() {
    struct ABi xyin, xyin1, quo, num, den;
@@ -45,8 +44,7 @@ void printABi(struct ABi abi) {
 ABi abiPower (struct ABi abi, int root){
   double a = abi.a;
   double bi = abi.bi;
-  //double xn1,xn, yin1,yin,x, yi,xt,yti;
-  double xt, yti,x,yi;
+  double xn1,xn, yin1,yin,x, yi,xt,yti;
   int n;
   bool done = false;
 //  cout<<"a "<<a<<" bi "<<bi<<"\n";
