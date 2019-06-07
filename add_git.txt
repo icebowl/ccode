@@ -1,0 +1,5 @@
+git remote set-url origin git@github.com:icebowl/ccode.git
+fix permissions
+
+eval `ssh-agent -s`
+ssh-add
