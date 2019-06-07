@@ -18,8 +18,8 @@ int main()
         cout << "No" << "\n";
 
     int x3 = false + 5 * m - b3;
-    cout << x3;
+    cout <<"x3 "<<x3;
 
 return 0;
 
-} 
+}

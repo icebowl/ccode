@@ -37,12 +37,12 @@ int main() {
 
      //cout<<"n = "<<n<<" quotient "<<endl;
      //printABi(xyin1);
-     done == false;
-     //done = abiCompare(xyin1,xyin);
+
+     done = abiCompare(xyin1,xyin);
      xyin = xyin1;
      cout <<"compare done "<< done <<" count "<<count<<endl;
      count++;
-     done == false;
+
    }//end for n
    //printABi(quo);
 
@@ -126,17 +126,16 @@ bool abiCompare (ABi xn1, ABi xn){
   cout<<"compare "<<endl;
   printABi(xn1);
   printABi(xn);
-  long limit = 10000000000;
+  long limit = 10000000;
   aL = long(a * limit);
   xL = long(x * limit);
   biL = long(bi * limit);
   yiL = long(yi * limit);
 
   cout <<aL<<" "<<xL<<" "<<biL<<" "<<yiL<<endl;
-  //if ((aL == xL)&&(biL == yiL))
-    if ((aL == xL)&&(biL == yiL))  {
+    if ((aL == xL)&&(biL == yiL)){
       compare = true;
     cout<<"compare function "<<compare<<endl;
-    return compare;
   }
+  return compare;
 }
