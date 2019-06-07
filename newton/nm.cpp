@@ -1,4 +1,4 @@
-/* structs.c: study the struct in C */
+
 #include <iostream>
 #include <array>
 using namespace std;
@@ -7,25 +7,27 @@ struct ABi {
    double bi;
 };
 
-void printABi(struct ABi abi);
-ABi abiPower (struct ABi abi, int root);
-ABi abiDivide (struct ABi num, ABi den);
+void printABi(ABi abi);
+ABi abiPower (ABi abi, int root);
+ABi abiDivide (ABi num, ABi den);
 
 // main()
 int main() {
    ABi xyin, xyin1, quo, num, den;
    xyin.a = -2.0;
    xyin.bi = 2.0;
+
+   cout<<" print xyin 1"<<endl;
    printABi(xyin);
-   //xyin1 = abiPower(xyin,4);
-   cout<<" print xyin1 power  "<<endl;
-   //printABi(xyin1);
-  // printABi(xyin);
-   num = abiPower(xyin,4);
    den = abiPower(xyin,4);
+   cout<<" print xyin 2"<<endl;
+   printABi(xyin);
+   num = abiPower(xyin,4);
+
    cout<<" print num den  "<<endl;
-  // printABi(num);
- //  printABi(den);
+   printABi(den);
+   printABi(num);
+
    quo = abiDivide(num,den);
    cout<<" quotient "<<endl;
    printABi(xyin);
@@ -38,7 +40,7 @@ int main() {
 void printABi(ABi abi) {
   double x = abi.a;
   double yi = abi.bi;
-   cout <<"* * * print a+bi * * * \n"<< "a+bi = "<<x<<" + "<<yi<<"i \n * * * * * * * \n"<<endl;
+   cout <<"* * * print a+bi -> "<< x<<" + "<<yi<<" i "<<endl;
 }
 
 ABi abiPower (ABi abi, int root){
@@ -47,22 +49,22 @@ ABi abiPower (ABi abi, int root){
   double bi = abi.bi;
   double xt, yti,x,yi;
   int n;
-//  cout<<"a "<<a<<" bi "<<bi<<"\n";
-//  cout<<" * * x "<<x<<" yi "<<yi<<"\n";
   // a+bi and x+yi loop for products
   for (n = 1; n < root; n++){
     xt = (x*a)-(yi*bi);
     yti = (a*yi)+(x*bi);
     x = xt; yi = yti;
-    //cout<<" * * nx "<<xt<<" yi "<<yti<<"\n";
   }
-  //cout<<" * * x "<<x<<" yi "<<yi<<"\n";
+   cout<<" abiPower "<<endl;
+  cout << " x " << x << " yi "<< yi <<endl;
   abiReturn.a = x;
   abiReturn.bi = yi;
+
+  printABi(abiReturn);
   return abiReturn;
 }
 
-ABi abiDivide (ABi n, struct ABi d){
+ABi abiDivide (ABi n, ABi d){
   ABi quo;
   double a = n.a;
   double bi = n.bi;
