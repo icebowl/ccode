@@ -27,21 +27,19 @@ int main() {
   while(!done){
     num = abiPower(xyin,1.0,-1.0,4);
     den = abiPower(xyin,4.0,0.0,3);
+  //   cout<<" print xyin 2"<<endl;
   //   printABi(xyin);
      //cout<<" print num den  "<<endl;
     /// printABi(num);
      //printABi(den);
      quo = abiDivide(num,den);
-     cout<<" quo "<<endl;
-     printABi(quo);
      xyin1 = abiAdd(xyin,quo);//subtract
+
      done = abiCompare(xyin1,xyin);
       cout <<"compare done "<< done <<" count "<<count<<endl;
      printABi(xyin);
      printABi(xyin1);
-     xyin.a = xyin1.a;
-     xyin.bi = xyin1.bi;
-     //xyin = xyin1;
+     xyin = xyin1;
     printABi(xyin);
     cout<<"* * * * * * * * * "<<endl;
      count++;
@@ -108,35 +106,35 @@ ABi abiDivide (ABi n, ABi d){
 
 ABi abiAdd (ABi xn1, ABi xn){
   ABi sum;
-  double x1 = xn1.a;
-  double yi1 = xn1.bi;
-  double x = xn.a;
-  double yi = xn.bi;
-  // aubstract
-  sum.a = x1 - x;
-  sum.bi = yi1 - yi;
+  double a = xn.a;
+  double bi = xn.bi;
+  double x = xn1.a;
+  double yi = xn1.bi;
+  sum.a = x - a;
+  sum.bi = yi - bi;
+
   return sum;
 }
 
 bool abiCompare (ABi xn1, ABi xn){
   ABi sum;
-  double x1 = xn1.a;
-  double yi1 = xn1.bi;
-  double x = xn.a;
-  double xi = xn.bi;
-  int xL,yiL,x1L,yi1L;
+  double a = xn.a;
+  double bi = xn.bi;
+  double x = xn1.a;
+  double yi = xn1.bi;
+  long aL,biL,xL,yiL;
   bool compare =  false;
-  cout<<" compare function "<<endl;
+  cout<<"compare "<<endl;
   printABi(xn1);
   printABi(xn);
-  int limit = 100000;
-  xL = int(x * limit);
-  yiL = int(xi * limit);
-  x1L = int(x1 * limit);
-  yi1L = int(yi1 * limit);
+  long limit = 10000;
+  aL = long(a * limit);
+  xL = long(x * limit);
+  biL = long(bi * limit);
+  yiL = long(yi * limit);
 
-  cout<<" INTEGERS " <<x1L<<" "<<xL<<" "<<yiL<<" "<<yi1L<<endl;
-    if ((xL == x1L)&&(yiL == yi1L)){
+  cout <<aL<<" "<<xL<<" "<<biL<<" "<<yiL<<endl;
+    if ((aL == xL)&&(biL == yiL)){
       compare = true;
     cout<<"compare function "<<compare<<endl;
   }
