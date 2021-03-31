@@ -1,4 +1,5 @@
 // squareroot.c
+// gcc squareroot.c -lm
 // gcc squareroot.c -o squareroot.o -lm
 
 #include <stdio.h>
