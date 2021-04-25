@@ -4,32 +4,28 @@
 using namespace std;
 const int arraylength = 26;
 array<string,26> selectSort(array<string,26>list);
+array<string,26> insertSort(array<string,26>list);
+void printArray(array<string,26>list);
 
 int main(){
 	array<string,26> natorev {"zulu","yankee","xray","whiskey","victor","uniform","tango","sierra", 
 							"romeo","quebec","papa","oscar","november","mike","lima","kilo","julliett", 
 							"india","hotel","golf","foxtrot","echo","delta","charlie","bravo","alfa"};
 	array<string,26>nato;
-	int i;
-	for (i = 0;i < 26 ;i++){
-		cout<<natorev[i]<<" ";
-		if(i % 4 == 0 && i != 0)cout<<endl;
-	}
+	cout<<"Array unsorted"<<endl;
+	printArray(natorev);
+	cout<<"\nSelection Sort"<<endl;
 	nato = selectSort(natorev);
-	
-	for (i = 0;i < 26 ;i++){
-		cout<<nato[i]<<" ";
-		if(i % 4 == 0 && i != 0)cout<<endl;
-	}
-	cout<<"\n\n";
+	printArray(nato);
+	cout<<"\nInsertion Sort"<<endl;
+	nato = insertSort(natorev);
+	printArray(nato);
     return 0;
 }
 
 
 array<string,26> selectSort(array<string,26>list){
 	int n = list.size();
-	cout<<"\n\nn "<<n<<"\n\n";
-
 		//pos_min is short for position of min
 		string temp;
         int pos_min,i,j;
@@ -51,19 +47,33 @@ array<string,26> selectSort(array<string,26>list){
 }
 
 
-
-
-void insertion_sort (int arr[], int length){
-                int j, temp;
+array<string,26> insertSort(array<string,26>list){
+	int i,j;
+	int p;
+	int swap = 0;
+	string temp;
+	int n = list.size();//array length
                 
-        for (int i = 0; i < length; i++){
-                j = i;
-                
-                while (j > 0 && arr[j] < arr[j-1]){
-                          temp = arr[j];
-                          arr[j] = arr[j-1];
-                          arr[j-1] = temp;
-                          j--;
-                          }
-                }
+	for (i = 0; i < n; i++){
+		j = i;
+			while (j > 0 && list[j] < list[j-1]){
+				temp = list[j];
+				list[j] = list[j-1];
+				list[j-1] = temp;
+				j--;
+				swap++;
+			}
+			cout << " loop i "<<i<<endl;
+			cin>>p;
+			printArray(list);
+	}
+	cout<<"swaps "<<swap<<endl;
+	return list;
+}
+
+void printArray(array<string,26>list){
+	for (int i = 0;i < 26 ;i++){
+		cout<<list[i]<<" ";
+		if(i % 13 == 0 && i != 0)cout<<endl;
+	}
 }
